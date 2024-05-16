@@ -26,7 +26,7 @@ source:
 build:
   number: 2
   binary_relocation: false
-  skip: true  # [osx]
+  skip: true  # [osx or (linux and s390x)]
 
 test:
   requires:
@@ -51,7 +51,7 @@ outputs:
       build:
         - {{ compiler("c") }}
         - {{ compiler("cxx") }}
-        - arm-variant * {{ arm_variant_type }}  # [aarch64]
+        #- arm-variant * {{ arm_variant_type }}  # [aarch64]
         - {{ stdlib("c") }}
         - patchelf <0.18.0                      # [linux]
       host:
@@ -87,7 +87,7 @@ outputs:
       build:
         - {{ compiler("c") }}
         - {{ compiler("cxx") }}
-        - arm-variant * {{ arm_variant_type }}  # [aarch64]
+        #- arm-variant * {{ arm_variant_type }}  # [aarch64]
         - {{ stdlib("c") }}
       host:
         - cuda-version {{ cuda_version }}
@@ -124,7 +124,7 @@ outputs:
       build:
         - {{ compiler("c") }}
         - {{ compiler("cxx") }}
-        - arm-variant * {{ arm_variant_type }}  # [aarch64]
+        #- arm-variant * {{ arm_variant_type }}  # [aarch64]
         - {{ stdlib("c") }}
       host:
         - cuda-version {{ cuda_version }}
