@@ -1,6 +1,6 @@
 {% set name = "libnvfatbin" %}
-{% set version = "13.0.85" %}
-{% set cuda_version = "13.0" %}
+{% set version = "13.1.80" %}
+{% set cuda_version = "13.1" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-ppc64le" %}  # [ppc64le]
 {% set platform = "linux-sbsa" %}  # [aarch64]
@@ -18,9 +18,9 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/{{ name }}/{{ platform }}/{{ name }}-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: 2f23e25c90517aefd0417304a6b428760373bac78a57d0137645b1bd326f754d  # [linux64]
-  sha256: 2599efa23bd85d29526bc579ee86c810705bfbfbefd033e4df85b13a2e8e661f  # [aarch64]
-  sha256: ba40fc248c8cf1e709004adeb8c92ac1343048b23a56961e93d282eaed9b3566  # [win]
+  sha256: b132f7a171dd1a44d88c00416bfa8beacb0182759fdfce8bb96ae1f369085698  # [linux64]
+  sha256: 8bbf86d5067aa49d8155ffce7d1cf38ea4afdbb2e4ef844a9472e3ed4d4320de  # [aarch64]
+  sha256: d0389a6b335b48130d003016397e085d9d2d0cabf4ea4deb1e93eb98d457e344  # [win]
 
 build:
   number: 0
