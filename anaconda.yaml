@@ -3,3 +3,7 @@ upstream_sources:
   - webpage:
       url: https://api.anaconda.org/package/conda-forge/libnvfatbin
       regex: '"version":\s*"([^"]+)"'
+    packages:
+      - libnvfatbin
+      - libnvfatbin-dev
+      - libnvfatbin-static
